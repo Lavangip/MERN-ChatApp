@@ -19,14 +19,16 @@ export const signup = async (req, res) => {
         const salt = await bcrypt.genSalt(10);
 		const hashedPassword = await bcrypt.hash(password, salt);
 
-        const profilepic = "https://xsgames.co/randomusers/avatar.php?g=pixel";
+        const boyProfilePic = `https://avatar.iran.liara.run/public/boy?username=${username}`;
+		const girlProfilePic = `https://avatar.iran.liara.run/public/girl?username=${username}`;
+
 
         const newUser = new User({
             fullname: fullName, 
             username,
             password: hashedPassword,
             gender,
-            profilepicture: profilepic,
+            profilepicture: gender === "male" ? boyProfilePic : girlProfilePic,
         });
 
         if (newUser) {

@@ -9,24 +9,61 @@ body {
 	background-position: center;
 }
 
+.custom-bg-color {
+	background-color: #BC8F8F;
+  }
 
-/* Style for scrollbar */
+.custom-bg-color2 {
+	background-color: #D2B48C;
+  }
+
+  /* Scrollbar */
 ::-webkit-scrollbar {
-    width: 5px; /* Set the width of the scrollbar */
+	width: 2px; /* adjust the width of the scrollbar */
+	height: 10px; /* adjust the height of the scrollbar */
+	background-color: #f5f5f5; /* background color of the scrollbar */
+  }
+  
+  /* Scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+	background-color: #DCDCDC; /* thumb color */
+	border-radius: 10px; /* rounded corners */
+  }
+  
+  /* Scrollbar thumb hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background-color: #D3D3D3; /* hover color */
+  }
+
+  /* SHAKE ANIMATION ON HORIZONTAL DIRECTION */
+.shake {
+	animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) 0.2s both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
 }
 
-::-webkit-scrollbar-track {
-    background: transparent; /* Track color (you can set it to match your background color) */
-}
+@keyframes shake {
+	10%,
+	90% {
+		transform: translate3d(-1px, 0, 0);
+	}
 
-::-webkit-scrollbar-thumb {
-    background: #ffffff; /* Thumb color (white in this case) */
-    border-radius: 5px; /* Rounded corners */
-}
+	20%,
+	80% {
+		transform: translate3d(2px, 0, 0);
+	}
 
-::-webkit-scrollbar-thumb:hover {
-    background: #cccccc; /* Thumb color on hover */
-}
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 0, 0);
+	}
 
+	40%,
+	60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
 
 
