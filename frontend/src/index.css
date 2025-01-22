@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 body {
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/public/bg.jpg");
+	background: linear-gradient(135deg, #BC8F8F, #D2B48C);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 }
+
 
 .custom-bg-color {
 	background-color: #BC8F8F;
